@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="assets/css/vendors.css" />
+	<link rel="stylesheet" href="assets/css/helppage.css">
+
+	<script src="assets/js/vendors.js"></script>
+	<script src="assets/js/helppage.js"></script>
+
+	<title>Saferpay documentation</title>
+</head>
+<body data-spy="scroll" data-target="#navScrollspy">
+
+	<div id="content" class="container-fluid">
+		<div class="row">
+
+			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
+				<div data-spy="affix">
+					<h3>
+						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+						<span class="text-primary">documentation</span>
+					</h3>
+
+					<ul class="nav">
+								<li>
+									<a href="index.html">01 Einleitung</a>
+								</li>
+								<li>
+									<a href="General.html">02 Allgemeines</a>
+										<ul class="nav">
+												<li><a href="General.html#start">1-Einf&#252;hrung</a></li>
+												<li><a href="General.html#requirement">2-Voraussetzungen</a></li>
+												<li><a href="General.html#pci">3-Datensicherheit und PCI DSS</a></li>
+												<li><a href="General.html#3ds">4-3D Secure</a></li>
+												<li><a href="General.html#dcc">5-Dynamic Currency Conversion</a></li>
+												<li><a href="General.html#paymentmethods">6-Unterst&#252;tzte Zahlungsmittel</a></li>
+												<li><a href="General.html#licenses">7-Lizenzen</a></li>
+												<li><a href="General.html#transaction-flow">8-Transaktionsablauf</a></li>
+												<li><a href="General.html#pm-functions">9-Zahlungsmittelfunktionen</a></li>
+												<li><a href="General.html#capture-batch">10-Capture (Verbuchung) und der Tagesabschluss</a></li>
+												<li><a href="General.html#cancel-refund">11-Wann Storno (Cancel) und wann Gutschrift?</a></li>
+												<li><a href="General.html#test">12-Saferpay Testsystem</a></li>
+										</ul>
+								</li>
+								<li>
+									<a href="testdata.html">11 Test Data</a>
+										<ul class="nav">
+												<li><a href="testdata.html#visa">VISA</a></li>
+										</ul>
+								</li>
+								<li>
+									<a href="faq.html">12 FAQ</a>
+								</li>
+								<li>
+									<a href="contact.html">13 Kontakt</a>
+								</li>
+								<li class="active">
+									<a href="Markdown-Cheatsheet.html">MarkDown Cheatsheet</a>
+										<ul class="nav">
+												<li><a href="Markdown-Cheatsheet.html#code">CodeSnippets</a></li>
+										</ul>
+								</li>
+								<li>
+									<a href="http://saferpay.github.io/jsonapi/" target="_blank">API Spec</a>
+								</li>
+
+					</ul>
+				</div>
+			</nav>
+
+			<span class="print-page-break"></span>
+
+			<main class="col-lg-10 col-sm-12">
+				
+				
+<section><h1>Markdown CheatSheet</h1><div class="row"><div class="col-lg-6">
+<p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber's original spec</a>.</p>
+</div></div></section><section><h2><a name='TOC'></a>Table of Contents</h2><div class="row"><div class="col-lg-6">
+<ol>
+<li><a href="#headers">Headers</a></li>
+<li><a href="#emphasis">Emphasis</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#code">Code and Syntax Highlighting</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#html">Inline HTML</a></li>
+<li><a href="#hr">Horizontal Rule</a></li>
+<li><a href="#lines">Line Breaks</a></li>
+<li><a href="#videos">Youtube videos</a></li>
+<li><a href="#sequence">Sequence Diagrams</a></li>
+</ol>
+</div><div class="col-lg-6">
+<pre><code>
+## &lt;a name='TOC'&gt;&lt;/a&gt;Table of Contents
+
+1. [Table of Contents](#TOC)
+1. [Headers](#headers)
+...
+
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="headers"></a>Headers</h2><div class="row"><div class="col-lg-6">
+<p>Lots going on here, as you notice we use the Anchor HTML element <code>a</code> for the header names, the <code>name</code> attribute is what we are going to use internally to create links inside the document. <code>&lt;a name=&quot;tocs&quot;&gt;</code> Once this is defined we can then create a link to point to that anchor using just the pount key like so: <code>[Go to TOCS](#tocs)</code>.</p>
+</div><div class="col-lg-6">
+<pre><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h1>H1</h1><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2>H2</h2><div class="row"><div class="col-lg-6">
+</div></div></section><section><h3>H3</h3><div class="row"><div class="col-lg-6">
+</div></div></section><section><h4>H4</h4><div class="row"><div class="col-lg-6">
+</div></div></section><section><h5>H5</h5><div class="row"><div class="col-lg-6">
+</div></div></section><section><h6>H6</h6><div class="row"><div class="col-lg-6">
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+</div></div></section><section><h1>Alt-H1</h1><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2>Alt-H2</h2><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="emphasis"></a>Emphasis</h2><div class="row"><div class="col-lg-6">
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. ~~Scratch this.~~</p>
+</div><div class="col-lg-6">
+<pre><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="lists"></a>Lists</h2><div class="row"><div class="col-lg-6">
+<ol>
+<li>First ordered list item</li>
+<li>Another item</li>
+</ol>
+<ul>
+<li>Unordered sub-list.</li>
+</ul>
+<ol>
+<li>
+<p>Actual numbers don't matter, just that it's a number</p>
+</li>
+<li>
+<p>Ordered sub-list</p>
+</li>
+<li>
+<p>And another item.</p>
+<p>You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).</p>
+<p>To have a line break without a paragraph, you will need to use two trailing spaces.
+Note that this line is separate, but within the same paragraph.
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+</li>
+</ol>
+<ul>
+<li>Unordered list can use asterisks</li>
+</ul>
+<ul>
+<li>Or minuses</li>
+</ul>
+<ul>
+<li>Or pluses</li>
+</ul>
+</div><div class="col-lg-6">
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+<pre><code>1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="links"></a>Links</h2><div class="row"><div class="col-lg-6">
+<p>There are two ways to create links.</p>
+<p><a href="https://www.google.com">I'm an inline-style link</a></p>
+<p><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title</a></p>
+<p><a href="https://www.mozilla.org">I'm a reference-style link</a></p>
+<p><a href="../blob/master/LICENSE">I'm a relative reference to a repository file</a></p>
+<p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+<p>Some text to show that the reference links can follow later.</p>
+</div><div class="col-lg-6">
+<pre><code>[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com &quot;Google's Homepage&quot;)
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself]
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="images"></a>Images</h2><div class="row"><div class="col-lg-6">
+<p>Here's our logo (hover to see the title text):</p>
+<p>Inline-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1" /></p>
+<p>Reference-style:
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2" /></p>
+</div><div class="col-lg-6">
+<pre><code>Here's our logo (hover to see the title text):
+
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)
+
+Reference-style:
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="code"></a>Code and Syntax Highlighting</h2><div class="row"><div class="col-lg-6">
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, we support some syntax highlighting; to see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+</div><div class="col-lg-6">
+<pre><code>Inline `code` has `back-ticks around` it.
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.</p>
+<pre><code class="language-javascript">var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+</code></pre>
+<p>C# that way</p>
+<pre><code class="language-cs">var s = &quot;C# syntax highlighting&quot;;
+Console.WriteLine(s);
+</code></pre>
+<p>Just code</p>
+<pre><code>No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre>
+</div><div class="col-lg-6">
+<pre>
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+C# that way
+
+```cs
+var s = "C# syntax highlighting";
+Console.WriteLine(s);
+```
+
+Just code
+
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+</pre>
+</div></div><div class="row"><div class="col-lg-6">
+<p>Or just move any content (but no head line) to the right by using <code>---&gt;&gt;&gt;</code> <code>&lt;&lt;&lt;---</code></p>
+</div></div></section><section><h2><a name="tables"></a>Tables</h2><div class="row"><div class="col-lg-6">
+<p>Tables aren't part of the core Markdown spec, you have to write html.</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Header</th>
+      <th>Another Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>field 1</td>
+      <td>value one</td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="col-lg-6">
+<pre><code>&lt;table class=&quot;table table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header&lt;/th&gt;
+      &lt;th&gt;Another Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;field 1&lt;/td&gt;
+      &lt;td&gt;value one&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+</div></div><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2><a name="blockquotes"></a>Blockquotes</h2><div class="row"><div class="col-lg-6">
+<pre><code>&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+</code></pre>
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+</div></div></section><section><h2><a name="html"></a>Inline HTML</h2><div class="row"><div class="col-lg-6">
+<p>You can also use raw HTML in your Markdown, and it'll mostly work pretty well.</p>
+<pre><code>&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+</div></div></section><section><h2><a name="hr"></a>Horizontal Rule</h2><div class="row"><div class="col-lg-6">
+<pre><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+</code></pre>
+<p>Three or more...</p>
+<hr />
+<p>Hyphens</p>
+<hr />
+<p>Asterisks</p>
+<hr />
+<p>Underscores</p>
+</div></div></section><section><h2><a name="lines"></a>Line Breaks</h2><div class="row"><div class="col-lg-6">
+<p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. &quot;Markdown Toggle&quot; is your friend.</p>
+<p>Here are some things to try out:</p>
+<pre><code>Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+</code></pre>
+<p>Here's a line for us to start with.</p>
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+<p>This line is also begins a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the <em>same paragraph</em>.</p>
+</div></div></section><section><h2><a name="sequence"></a>Sequence Diagrams</h2><div class="row"><div class="col-lg-6">
+<p>Not part of the Markdown Spec, but we also support <a href="https://github.com/bramp/js-sequence-diagrams">Sequence diagrams</a></p>
+<pre><code class="language-sequence">Title: Here is a title
+A-&gt;B: Normal line
+B--&gt;C: Dashed line
+C-&gt;&gt;D: Open arrow
+D--&gt;&gt;A: Dashed open arrow
+</code></pre>
+</div><div class="col-lg-6">
+<pre>
+```sequence
+Title: Here is a title
+A->B: Normal line
+B-->C: Dashed line
+C->>D: Open arrow
+D-->>A: Dashed open arrow
+```
+</pre>
+</div></div><div class="row"><div class="col-lg-6"></div></div></section>
+
+			</main>
+
+		</div>
+	</div>
+
+	<div class="scroll-top-wrapper">
+		<a href="#top" class="scroll-top-inner" onclick="$('html,body').animate({ scrollTop: 0 }, 'slow'); return false;">
+			<span class="glyphicon glyphicon-chevron-up"></span> Back to Top
+		</a>
+	</div>
+
+</body>
+</html>
+

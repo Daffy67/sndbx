@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="assets/css/vendors.css" />
+	<link rel="stylesheet" href="assets/css/helppage.css">
+
+	<script src="assets/js/vendors.js"></script>
+	<script src="assets/js/helppage.js"></script>
+
+	<title>Saferpay documentation</title>
+</head>
+<body data-spy="scroll" data-target="#navScrollspy">
+
+	<div id="content" class="container-fluid">
+		<div class="row">
+
+			<nav class="col-lg-2 hidden-xs hidden-sm hidden-md" id="navScrollspy">
+				<div data-spy="affix">
+					<h3>
+						<span style="font-size: x-large; font-weight: bold">Saferpay</span>
+						<span class="text-primary">documentation</span>
+					</h3>
+
+					<ul class="nav">
+								<li>
+									<a href="index.html">01 Einleitung</a>
+								</li>
+								<li>
+									<a href="General.html">02 Allgemeines</a>
+										<ul class="nav">
+												<li><a href="General.html#start">1-Einf&#252;hrung</a></li>
+												<li><a href="General.html#requirement">2-Voraussetzungen</a></li>
+												<li><a href="General.html#pci">3-Datensicherheit und PCI DSS</a></li>
+												<li><a href="General.html#3ds">4-3D Secure</a></li>
+												<li><a href="General.html#dcc">5-Dynamic Currency Conversion</a></li>
+												<li><a href="General.html#paymentmethods">6-Unterst&#252;tzte Zahlungsmittel</a></li>
+												<li><a href="General.html#licenses">7-Lizenzen</a></li>
+												<li><a href="General.html#transaction-flow">8-Transaktionsablauf</a></li>
+												<li><a href="General.html#pm-functions">9-Zahlungsmittelfunktionen</a></li>
+												<li><a href="General.html#capture-batch">10-Capture (Verbuchung) und der Tagesabschluss</a></li>
+												<li><a href="General.html#cancel-refund">11-Wann Storno (Cancel) und wann Gutschrift?</a></li>
+												<li><a href="General.html#test">12-Saferpay Testsystem</a></li>
+										</ul>
+								</li>
+								<li>
+									<a href="testdata.html">11 Test Data</a>
+										<ul class="nav">
+												<li><a href="testdata.html#visa">VISA</a></li>
+										</ul>
+								</li>
+								<li class="active">
+									<a href="faq.html">12 FAQ</a>
+								</li>
+								<li>
+									<a href="contact.html">13 Kontakt</a>
+								</li>
+								<li>
+									<a href="Markdown-Cheatsheet.html">MarkDown Cheatsheet</a>
+										<ul class="nav">
+												<li><a href="Markdown-Cheatsheet.html#code">CodeSnippets</a></li>
+										</ul>
+								</li>
+								<li>
+									<a href="http://saferpay.github.io/jsonapi/" target="_blank">API Spec</a>
+								</li>
+
+					</ul>
+				</div>
+			</nav>
+
+			<span class="print-page-break"></span>
+
+			<main class="col-lg-10 col-sm-12">
+				
+				
+<section><h1>12 - F.A.Q</h1><div class="row"><div class="col-lg-6">
+</div></div></section><section><h2>Kann ich meinen Testaccount auch auf dem Livesystem verwenden?</h2><div class="row"><div class="col-lg-6">
+<p>Nein! Die Test- und Livesysteme sind vollständig voneinander abgetrennt.  Daten werden zwischen diesen den aus PCI-Vorschrift nicht ausgetauscht.</p>
+</div></div></section><section><h2>Kann ich auf dem Testaccount richtige Karten nutzen?</h2><div class="row"><div class="col-lg-6">
+<p>Nein! Eine Nutzung von realen Karten ist nicht möglich. Diese erzeugen immer einen Fehlschlag.</p>
+</div></div></section><section><h2>Welche Funktionen stehen auf dem Testsystem zur Verfügung?</h2><div class="row"><div class="col-lg-6">
+<p>Das Testsystem bietet generell alle Funktionen an. Auf den Accounts ist –zur Evaluierung- generell Saferpay Business aufgeschaltet. Es ist deshalb sehr wichtig, dass sie vorab festlegen, ob sie im Livebetrieb später ebenfalls die Businessfunktion nutzen, oder nicht. Dementsprechend sollten sie dann testen.</p>
+</div></div></section><section><h2>Welche Zahlungsmittel kann ich testen?</h2><div class="row"><div class="col-lg-6">
+<p>Zur Zeit stehen folgende Zahlungsmittelsimulatoren zur Verfügung:</p>
+<ul>
+<li>SEPA Lastschrift (nur EUR)</li>
+<li>PayPal</li>
+<li>American Express</li>
+<li>Diners Club</li>
+<li>JCB</li>
+<li>MasterCard</li>
+<li>myOne</li>
+<li>Shopping Bonus Card</li>
+<li>VISA</li>
+<li>Masterpass Wallet-Simulator</li>
+<li>Saferpay Testcard (Nur auf Nachfrage. Kontaktieren sie hierfür bitte das <a href="contact.html">Saferpay Integration Team</a>)</li>
+</ul>
+</div></div></section><section><h2>Welche Währungen sind auf dem Testsystem verfügbar?</h2><div class="row"><div class="col-lg-6">
+<p>Standardmäßig sind auf den Testaccounts <code>EUR</code> und <code>CHF</code> aufgeschaltet. Auf Nachfrage können noch folgende Währungen aktiviert werden:</p>
+<pre><code>AUD, CAD, CZK, DKK, GBP, HUF, JPY, LVL, NOK, PLN, RON, RUB, RUR, SEK, USD
+</code></pre>
+<p>Kontaktieren sie hierfür bitte das <a href="contact.html">Saferpay Integration Team</a>.</p></div></div></section>
+
+			</main>
+
+		</div>
+	</div>
+
+	<div class="scroll-top-wrapper">
+		<a href="#top" class="scroll-top-inner" onclick="$('html,body').animate({ scrollTop: 0 }, 'slow'); return false;">
+			<span class="glyphicon glyphicon-chevron-up"></span> Back to Top
+		</a>
+	</div>
+
+</body>
+</html>
+
